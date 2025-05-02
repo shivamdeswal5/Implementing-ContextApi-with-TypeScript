@@ -6,11 +6,11 @@ export default function Profile() {
     const [username,setUserName] = useState<string>();
     const [password,setPassword] = useState<string>();
 
-    const {setUser,user} = useContext(UserContext); 
+    const {setUser ,user}: any = useContext(UserContext); 
 
     const handleSubmit = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
         e.preventDefault();
-        setUser({username:username,password:password})
+        setUser({username:username,password:password}) 
         setUserName('');
         setPassword('');
         console.log("User:  ",user)
